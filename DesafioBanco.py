@@ -10,8 +10,8 @@ Escreva uma opção: """
 saldo = 0
 limite = 500
 extrato = ""
-qtd_saques = 0
-LIMITE_SAQUES = 3
+qtdSaques = 0
+SaquesLimite = 3
 
 while True:
 
@@ -34,7 +34,7 @@ while True:
 
         limiteExcedente = valor > limite
 
-        qntdSaquesExcedente = qtd_saques >= LIMITE_SAQUES
+        qntdSaquesExcedente = qtdSaques >= SaquesLimite
 
         if saldoExcedente:
             print("Falhou! Sem saldo.")
@@ -48,7 +48,7 @@ while True:
         elif valor > 0:
             saldo -= valor
             extrato += f"Saque: R$ {valor:}\n"
-            qtd_saques += 1
+            qtdSaques += 1
 
         else:
             print("Operação falhou! O valor informado é inválido.")
